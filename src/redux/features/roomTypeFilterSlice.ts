@@ -16,6 +16,5 @@ const roomTypeFilterSlice = createSlice({
   },
 })
 
-export const { setRoomTypeFilter, resetRoomTypeFilter } =
-  roomTypeFilterSlice.actions
+export const { setRoomTypeFilter, resetRoomTypeFilter } = roomTypeFilterSlice.actions
 export default roomTypeFilterSlice.reducer

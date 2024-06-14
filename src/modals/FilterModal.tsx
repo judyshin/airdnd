@@ -83,28 +83,28 @@ function FilterModal() {
 
   function Header() {
     return (
-      <div className='relative flex items-center justify-center px-6 border-b border-solid rounded-t border-slate-200'>
+      <div className='relative flex items-center justify-center rounded-t border-b border-solid border-slate-200 px-6'>
         <button
           onClick={handleCloseModal}
-          className='absolute p-1 transition border-0 left-4 hover:opacity-70'>
+          className='absolute left-4 border-0 p-1 transition hover:opacity-70'>
           <IoMdClose size={18} />
         </button>
-        <div className='flex items-center h-16 text-lg font-semibold'>필터</div>
+        <div className='flex h-16 items-center text-lg font-semibold'>필터</div>
       </div>
     )
   }
 
   function Footer() {
     return (
-      <div className='flex items-center justify-between w-full px-6 py-4 border-t border-gray-300 border-solid'>
+      <div className='flex w-full items-center justify-between border-t border-solid border-gray-300 px-6 py-4'>
         <button
           onClick={handleClearFilters}
-          className='px-4 py-3 font-semibold text-black transition bg-white rounded-lg hover:opacity-80'>
+          className='rounded-lg bg-white px-4 py-3 font-semibold text-black transition hover:opacity-80'>
           전체 해제
         </button>
         <button
           onClick={handleApplyFilters}
-          className='h-12 px-4 py-3 font-semibold text-white transition bg-black rounded-lg hover:opacity-80'>
+          className='h-12 rounded-lg bg-black px-4 py-3 font-semibold text-white transition hover:opacity-80'>
           {roomTypeFilter.roomType === '방'
             ? '방'
             : roomTypeFilter.roomType === '집 전체'
@@ -136,9 +136,9 @@ function FilterModal() {
 
   return (
     <Portal>
-      <div className='fixed inset-0 z-50 flex items-center justify-center p-10 outline-none bg-neutral-800/70 focus:outline-none'>
-        <div className='w-full h-full max-w-3xl overflow-hidden max-h-3xl'>
-          <div className='flex flex-col w-full h-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none'>
+      <div className='fixed inset-0 z-50 flex items-center justify-center bg-neutral-800/70 p-10 outline-none focus:outline-none'>
+        <div className='max-h-3xl h-full w-full max-w-3xl overflow-hidden'>
+          <div className='flex h-full w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
             <Header />
             <div ref={scrollRef} className='flex-auto overflow-y-auto'>
               <PriceRangeFilter />

@@ -34,7 +34,7 @@ function BookingOptionFilter(): React.ReactElement {
 
   function Heading(): React.ReactElement {
     return (
-      <div className='flex flex-col w-full pb-6'>
+      <div className='flex w-full flex-col pb-6'>
         <span className='text-2xl font-semibold'>예약 옵션</span>
       </div>
     )
@@ -48,11 +48,11 @@ function BookingOptionFilter(): React.ReactElement {
   }: FilterOptionProps): React.ReactElement {
     return (
       <div className='flex items-center justify-between pb-3 pr-1 pt-3.5'>
-        <div className='flex flex-col w-full'>
+        <div className='flex w-full flex-col'>
           <div className='text-gray-900'>{title}</div>
           <div className='pt-1 text-sm text-gray-500'>{description}</div>
         </div>
-        <label className='relative inline-flex items-center cursor-pointer'>
+        <label className='relative inline-flex cursor-pointer items-center'>
           <input type='checkbox' checked={checked} onChange={onChange} className='sr-only' />
           <div
             onClick={() =>
@@ -60,7 +60,7 @@ function BookingOptionFilter(): React.ReactElement {
                 target: { checked: !checked },
               } as React.ChangeEvent<HTMLInputElement>)
             }
-            className='flex items-center justify-center w-20 h-10'>
+            className='flex h-10 w-20 items-center justify-center'>
             <div
               className={clsx(
                 'relative flex h-8 w-14 items-center rounded-full transition-colors duration-200',
@@ -73,7 +73,7 @@ function BookingOptionFilter(): React.ReactElement {
                 )}>
                 {checked && (
                   <FaCheck
-                    className='absolute text-black transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2'
+                    className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-black'
                     size={12}
                   />
                 )}
@@ -86,7 +86,7 @@ function BookingOptionFilter(): React.ReactElement {
   }
 
   return (
-    <div className='px-6 py-8 bg-white border-b border-solid border-slate-300'>
+    <div className='border-b border-solid border-slate-300 bg-white px-6 py-8'>
       <Heading />
       <div>
         {options.map(option => (

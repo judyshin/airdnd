@@ -48,9 +48,9 @@ function RoomTypeFilter(): React.ReactElement {
   }
 
   return (
-    <div className='flex flex-col px-6 py-8 border-b border-solid border-slate-300'>
+    <div className='flex flex-col border-b border-solid border-slate-300 px-6 py-8'>
       <Heading />
-      <div className='flex flex-row w-full h-16 px-10 overflow-hidden'>
+      <div className='flex h-16 w-full flex-row overflow-hidden px-10'>
         <FilterButton
           value=''
           currentFilter={roomTypeFilter}

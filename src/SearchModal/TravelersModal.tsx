@@ -25,7 +25,7 @@ function TravelersModal() {
   }
 
   return (
-    <div className='absolute right-0 z-50 px-8 py-4 bg-white shadow-lg top-20 rounded-3xl'>
+    <div className='absolute right-0 top-20 z-50 rounded-3xl bg-white px-8 py-4 shadow-lg'>
       <div className='flex w-[330px] flex-col'>
         {TravelerItem.map(({ id, label, description, count }) => (
           <div

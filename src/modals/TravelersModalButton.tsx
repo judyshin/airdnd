@@ -37,9 +37,9 @@ function TravelersModalButton() {
       </button>
       {isOpen && (
         <Portal>
-          <div className='fixed inset-0 z-50 flex items-center justify-center p-10 outline-none bg-neutral-800/70 focus:outline-none'>
-            <div className='w-full h-full max-w-3xl overflow-hidden max-h-3xl'>
-              <div className='flex flex-col w-full h-full bg-white border-0 rounded-lg shadow-lg outline-none focus:outline-none'>
+          <div className='fixed inset-0 z-50 flex items-center justify-center bg-neutral-800/70 p-10 outline-none focus:outline-none'>
+            <div className='max-h-3xl h-full w-full max-w-3xl overflow-hidden'>
+              <div className='flex h-full w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
                 <TravelersModal />
               </div>
             </div>

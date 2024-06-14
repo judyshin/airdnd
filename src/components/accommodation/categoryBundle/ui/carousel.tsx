@@ -9,7 +9,7 @@ import { Button } from '@/components/accommodation/categoryBundle/ui/button'
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 
 type CarouselApi = UseEmblaCarouselType[1]
-type UseCarouselParameters = Parameters<typeof useEmbslaCarousel>
+type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
 

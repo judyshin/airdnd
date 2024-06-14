@@ -94,7 +94,7 @@ function BedFilter(): React.ReactElement {
   }
 
   return (
-    <div className='px-6 py-8 border-b border-solid border-slate-300'>
+    <div className='border-b border-solid border-slate-300 px-6 py-8'>
       <Heading />
       <div className='flex h-[306px] flex-col justify-between'>
         <FilterButtons selectedValue={bedRooms} handleClick={handleBedroomClick} label='침실' />

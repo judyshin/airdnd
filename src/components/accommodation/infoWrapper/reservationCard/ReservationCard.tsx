@@ -25,7 +25,7 @@ function ReservationCard(pricePerDay) {
 
   function handleReservationButtonClick() {
     if (start !== null && start !== end) {
-      console.log('예약 됐습니다')
+      // console.log('예약 됐습니다')
     } else {
       setIsCalendarModalOpen(true)
     }

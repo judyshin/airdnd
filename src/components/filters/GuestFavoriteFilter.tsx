@@ -22,9 +22,9 @@ const GuestFavoriteFilter = () => {
   }
 
   return (
-    <div className='flex flex-col px-6 py-8 border-b border-solid border-slate-300'>
+    <div className='flex flex-col border-b border-solid border-slate-300 px-6 py-8'>
       <Heading />
-      <div className='flex flex-row items-center justify-between w-full h-full'>
+      <div className='flex h-full w-full flex-row items-center justify-between'>
         <button
           className={clsx(
             'w-120 flex h-44 cursor-pointer items-center justify-start rounded-xl px-6 py-5',
@@ -49,7 +49,7 @@ const GuestFavoriteFilter = () => {
                 style={{ width: 30, height: 30 }}
               />
             </div>
-            <div className='text-left h-15'>
+            <div className='h-15 text-left'>
               <p className='font-semibold'>게스트 선호</p>
               <p className='text-sm text-gray-500'>에어비앤비 게스트에게 가장 사랑받는 숙소</p>
             </div>

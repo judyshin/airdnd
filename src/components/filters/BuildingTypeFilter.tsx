@@ -31,7 +31,7 @@ const BuildingTypeFilter = () => {
         { 'border border-solid border-gray-300': !selected },
       )}
       onClick={onClick}>
-      <div className='flex flex-col items-start justify-between h-full gap-4'>
+      <div className='flex h-full flex-col items-start justify-between gap-4'>
         <div className='flex flex-row items-start justify-start'>
           <Image alt={type} src={image} width={30} height={30} />
         </div>
@@ -43,7 +43,7 @@ const BuildingTypeFilter = () => {
   )
 
   return (
-    <div className='flex flex-col px-6 py-8 border-b border-solid border-slate-300'>
+    <div className='flex flex-col border-b border-solid border-slate-300 px-6 py-8'>
       <div className='flex flex-col pb-6'>
         <span className='text-2xl font-semibold'>건물 유형</span>
       </div>

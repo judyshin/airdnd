@@ -78,7 +78,7 @@ function AmenitiesFilter(): React.ReactElement {
 
   function Heading(): React.ReactElement {
     return (
-      <div className='flex flex-col w-full pb-6'>
+      <div className='flex w-full flex-col pb-6'>
         <span className='text-2xl font-semibold'>편의시설</span>
       </div>
     )
@@ -86,15 +86,15 @@ function AmenitiesFilter(): React.ReactElement {
 
   function AmenityItem({ amenity, checked, handleAmenitiesChange }: AmenityItemProps) {
     return (
-      <div className='flex flex-row w-1/2'>
-        <label key={amenity} className='inline-flex items-center flex-grow gap-4 py-3'>
+      <div className='flex w-1/2 flex-row'>
+        <label key={amenity} className='inline-flex flex-grow items-center gap-4 py-3'>
           <input
             type='checkbox'
             name='amenities'
             value={amenity}
             checked={checked}
             onChange={handleAmenitiesChange}
-            className='w-6 h-6 text-black form-checkbox accent-black'
+            className='form-checkbox h-6 w-6 text-black accent-black'
           />
           <span className='pl-2 text-gray-700'>{amenity}</span>
         </label>
@@ -110,7 +110,7 @@ function AmenitiesFilter(): React.ReactElement {
   }: AmenityCategoryProps): React.ReactElement {
     return (
       <div className='w-full'>
-        <h3 className='pt-2 pb-3 font-semibold text-gray-800 text-md'>{title}</h3>
+        <h3 className='text-md pb-3 pt-2 font-semibold text-gray-800'>{title}</h3>
         <div className='flex flex-wrap'>
           {amenities.map(amenity => (
             <AmenityItem
@@ -126,10 +126,10 @@ function AmenitiesFilter(): React.ReactElement {
   }
 
   return (
-    <div className='flex flex-col items-start w-full px-6 py-8 border-b border-solid border-slate-300'>
+    <div className='flex w-full flex-col items-start border-b border-solid border-slate-300 px-6 py-8'>
       <Heading />
       {amenityCategories.slice(0, isExpanded ? amenityCategories.length : 1).map(category => (
-        <div className='w-full mt-6' key={category.categoryId}>
+        <div className='mt-6 w-full' key={category.categoryId}>
           <AmenityCategory
             title={category.label}
             amenities={amenityItems
@@ -142,7 +142,7 @@ function AmenitiesFilter(): React.ReactElement {
       ))}
       <div
         onClick={toggleExpand}
-        className='text-black underline cursor-pointer underline-offset-4 focus:outline-none'>
+        className='cursor-pointer text-black underline underline-offset-4 focus:outline-none'>
         {isExpanded ? '접기' : '더 보기'}
       </div>
     </div>
